@@ -24,7 +24,15 @@
             </div>
             
             <div>
+                <h2>API Keys</h2>
+                <p>Making use of the BGG API doesn't require the use of an API key. Instead BGG limits you to a 5-second wait between requests. If you make requests too
+                    frequently, the server will give you 500 or 503 return code, reporting that it is too busy.</p>
                 <h2>What can you access with the BGG API?</h2>
+                <p>Before we can talk about how to access data on BGG, we need to first talk about what <em>kind</em> of information you can access.
+                    The BGG database contains a wealth of information that you can access for various purposes. For the sake of brevity, this tutorial will only focus
+                    on a few of the more popular forms of data. A full list of all item types that can be accessed can be found on the 
+                    <a href='https://boardgamegeek.com/wiki/page/BGG_XML_API2'>BGG XML API2</a> main page.</p>
+                <h3>Things</h3>
                 <p>The BGG database contains entries for physical products referred to as <em>things</em> in the API documentation. <em>Things</em> include the following:</p>
                 <div id='tableWrapper'>
                     <table id='t01'>
@@ -65,7 +73,29 @@
                         </tr>
                     </table>
                 </div>
-                
+                <h3>Users</h3>
+                <p>Information can be retrieved about every user registered to BGG. In particular, this information includes:</p>
+                <ul>
+                    <li>The user's name</li>
+                    <li>Games the user has marked as "owned"</li>
+                    <li>Games the user has rated</li>
+                    <li>Games on the user's wishlist</li>
+                    <li>Games the user has recorded play sessions for</li>
+                </ul>
+                <h3>Hot Items</h3>
+                <p>You can also retrieve a list of the "hottest" games currently on the site. These lists include the hottest:</p>
+                <ul>
+                    <li>Board games</li>
+                    <li>RPGs</li>
+                    <li>Video games</li>
+                    <li>Board game people</li>
+                    <li>RPG people</li>
+                    <li>Board game companies</li>
+                    <li>RPG companies</li>
+                    <li>Video game companies</li>
+                </ul>
+                <h3>General Search</h3>
+                <p>You can also do a general search of the site to find items that match your search query.</p>
             </div>
         
         </div>
