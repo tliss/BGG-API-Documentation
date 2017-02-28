@@ -7,9 +7,34 @@
     font-family: verdana, "lucida grande", arial, sans-serif;
 }
 
+table#t01{
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto;
+}
+
 html, body {
     background-color: #D1D1E1;
     padding: 0px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: #071e57;
+    color: white;
 }
 
 #logo {

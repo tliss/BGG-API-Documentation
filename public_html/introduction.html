@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BGG API Documentation</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    </head>
+    <body>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Welcome</a>
+            <a href="./introduction.html">Introduction</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div id="main">
+            
+            <span id="openBar" onclick="openNav()">&#9776; Menu</span>
+            
+            <div id="frontPageHead">
+                <h1>Introduction</h1>
+            </div>
+            
+            <div>
+                <h2>What can you access with the BGG API?</h2>
+                <p>The BGG database contains entries for physical products referred to as <em>things</em> in the API documentation. <em>Things</em> include the following:</p>
+                <div id='tableWrapper'>
+                    <table id='t01'>
+                        <tr>
+                            <th>Thing type</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>boardgame</td>
+                            <td>A boardgame</td>
+                            <td><a href="https://boardgamegeek.com/boardgame/13/catan">Catan</a></td>
+                        </tr>
+                        <tr>
+                            <td>boardgameexpansion</td>
+                            <td>An expansion to a boardgame</td>
+                            <td><a href="https://boardgamegeek.com/boardgameexpansion/926/catan-cities-knights">Catan: Cities & Knights</a></td>
+                        </tr>
+                        <tr>
+                            <td>boardgameaccessory</td>
+                            <td>An accesory for a boardgame</td>
+                            <td><a href="https://boardgamegeek.com/boardgameaccessory/140404/settlers-catan-replacement-cards">Catan Replacement Cards</a></td>
+                        </tr>
+                        <tr>
+                            <td>videogame</td>
+                            <td>A videogame</td>
+                            <td><a href="https://videogamegeek.com/videogame/68407/super-mario-bros">Super Mario Bros.</a></td>
+                        </tr>
+                        <tr>
+                            <td>rpgitem</td>
+                            <td>An RPG book</td>
+                            <td><a href="https://rpggeek.com/rpgitem/162994/players-handbook-dd-5e">The Dungeons & Dragons Player's Handbook</a></td>
+                        </tr>
+                        <tr>
+                            <td>rpgissue</td>
+                            <td>An RPG periodical</td>
+                            <td><a href="https://rpggeek.com/rpgissue/47220/dragon-issue-1-jun-1976">Dragon Magazine Issue #1</a></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+        
+        </div>
+
+        <script src="javascript.js"></script>
+    </body>
+</html>
