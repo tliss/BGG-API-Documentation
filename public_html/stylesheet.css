@@ -55,7 +55,7 @@ table#t01 th {
     padding-bottom: 3px;
     transition: 0.3s;
     position: fixed;
-    margin-left: 0px;
+    margin-left: -6em;
     margin-top: 1em;
 }
 
@@ -63,6 +63,18 @@ h1 {
     font-size: 3em;
     color: #071e57;
     margin: 0px;
+}
+
+h3 {
+    padding-left: 2em;
+    font-style: italic;
+}
+h3 + p{
+    padding-left: 2em;
+}
+
+h3 + p + ul {
+    padding-left: 6em;
 }
 
 #frontPageHead {
@@ -149,10 +161,59 @@ content: "\2014 \2009";
 #main {
     transition: margin-left .5s;
     padding: 20px;
+    padding-left: 8em;
+    padding-right: 8em;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+/**********************
+*Button code taken and modified from:https://www.w3schools.com/css/css3_buttons.asp
+**********************/
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ff7c3d;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
