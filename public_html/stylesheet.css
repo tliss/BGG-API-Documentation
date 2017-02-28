@@ -21,7 +21,7 @@ html, body {
     font-size:20px;
     font-weight: bold;
     border: 2px solid #071e57;
-    color: #D1D1E1;
+    color: #071e57;
     background-color: antiquewhite;
     border-radius: 10px; 
     cursor: pointer;
@@ -30,12 +30,8 @@ html, body {
     padding-bottom: 3px;
     transition: 0.3s;
     position: fixed;
-    margin-left: 1em;
+    margin-left: 0px;
     margin-top: 1em;
-}
-
-#openBar:hover {
-    color: #071e57;
 }
 
 h1 {
@@ -48,8 +44,42 @@ h1 {
     text-align: center;
 }
 
+p {
+    margin-left: 2em;
+}
+
 /*****
-* Side bar code below taken from https://www.w3schools.com/howto/howto_js_sidenav.asp
+* Quote formatting code below taken and modified from http://stackoverflow.com/questions/16325687/make-big-quotes-with-blockquote
+*****/
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 85%;
+margin: 0.25em 0;
+padding: 0.35em 40px;
+margin-left: 3em;
+padding-top: 0px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+}
+
+blockquote cite {
+color: #7a7a7a;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+margin-left: 3em;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
+/*****
+* Side bar code below taken and modified from https://www.w3schools.com/howto/howto_js_sidenav.asp
 *****/
 
 /* The side navigation menu */
@@ -93,6 +123,7 @@ h1 {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
+    padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
