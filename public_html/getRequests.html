@@ -35,6 +35,14 @@ and open the template in the editor.
                 </p>
                 <ul><li><em>GET</em> requests are used to retrieve data<li><em>Post</em> requests are used to insert/update remote data</ul>
                 <p>There is currently no way to submit POST requests via the BGG API, so we will only be using the API to retrieve data.</p>
+                <h2>CORS Issues</h2>
+                <p>Because your call's domain your target's domain are different, your code will be attempting to make a 
+                    <strong>cross-domain request</strong>, also known as a <strong>Cross-Origin Resource Sharing (CORS)</strong> request. This is different from an ordinary GET request. Unfortunately, BGG 
+                    doesn't support CORS requests (and it has been <a href="https://boardgamegeek.com/thread/1304818/cross-origin-resource-sharing-cors">requested for quite a while</a>)
+                    so your request will need some modification before it will work.</p>
+                    <p>The current workaround for this issue is to mirror server-side access to the API using a reverse proxy and include all the necessary headers there.
+                        The one we are going to examine is <a href="https://github.com/Rob--W/cors-anywhere">CORS-Anywhere</a>.</p>
+                
                 <h2>Getting Setup</h2>
                 <p>To get started using </p>
                 
