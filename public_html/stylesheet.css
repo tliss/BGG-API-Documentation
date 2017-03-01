@@ -193,12 +193,17 @@ content: "\2014 \2009";
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100px;
+  width: 125px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  float: right;
   font-weight: bold;
+  float:right;
+  margin-bottom: 20px;
+}
+
+.buttonPrevious{
+    
 }
 
 .button span {
@@ -208,7 +213,16 @@ content: "\2014 \2009";
   transition: 0.5s;
 }
 
-.button span:after {
+.buttonPrevious span:before {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -15px;
+  transition: 0.5s;
+}
+
+.buttonNext span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -217,11 +231,20 @@ content: "\2014 \2009";
   transition: 0.5s;
 }
 
-.button:hover span {
+.buttonNext:hover span {
   padding-right: 15px;
 }
 
-.button:hover span:after {
+.buttonNext:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.buttonPrevious:hover span {
+  padding-left: 15px;
+}
+
+.buttonPrevious:hover span:before {
+  opacity: 1;
+  left: 0;
 }
