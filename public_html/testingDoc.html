@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>
-      var req = new XMLHttpRequest();
-      req.open("GET", "http://localhost:8080/http://www.boardgamegeek.com/xmlapi/boardgame/13", false);
-      req.send(null);
-      console.log(req.responseText);
-    </script>
-  </head>
-  <body>
-  </body>
+    <head>
+        <title>Tester</title>
+        <script>
+            var req = new XMLHttpRequest();
+            req.open("GET", "http://localhost:2020/http://www.boardgamegeek.com/xmlapi/boardgame/13", false);
+            req.send(null);
+            console.log(req.responseText);
+        </script>
+    </head>
+    <body>
+        <p id="results"></p>
+        
+        <script>
+            var parser, xmlDoc;
+            var text = req.responseText;
+            
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(text, "text/xml");
+            
+            results = document.getElementById("results");
+            results.innerHTML = xmlDoc.getElementsByTagName("yearpublished")[0].childNodes[0].nodeValue;
+        </script>
+    </body>
 </html>
