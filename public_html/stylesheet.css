@@ -13,6 +13,11 @@ table#t01{
     margin-right:auto;
 }
 
+.images {
+    text-align:center;
+}
+
+
 html, body {
     background-color: #D1D1E1;
     padding: 0px;
@@ -48,11 +53,6 @@ table#t01 th {
     margin-right:auto;
 }
 
-#logo {
-    text-align: center;
-    width: 100%;
-}
-
 #openBar {
     font-size:30px;
     font-weight: bold;
@@ -75,6 +75,7 @@ h1 {
     font-size: 3em;
     color: #071e57;
     margin: 0px;
+    text-align: center;
 }
 
 h3 {
@@ -97,10 +98,6 @@ h3 + p + ul {
 
 ol {
     padding-left: 6em;
-}
-
-#frontPageHead {
-    text-align: center;
 }
 
 p {

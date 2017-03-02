@@ -16,7 +16,7 @@ and open the template in the editor.
             <a href="./index.html">Welcome</a>
             <a href="./introduction.html">Introduction</a>
             <a href="./getRequests.html">GET Requests</a>
-            <a href="#">Contact</a>
+            <a href="./understandingXML">Understanding XML</a>
         </div>
 
         <div id="main">
@@ -57,9 +57,14 @@ and open the template in the editor.
                 </ol>
                 
                 <h2>More about CORS Anywhere</h2>
-                <p>Stuff</p>
+                <p>You may notice that the request made in the previous code example looks a little strange. When using CORS Anywhere, you need to prefix all of your requests with a reference back to the server running CORS Anywhere. The address CORS Anywhere is running on is displayed when you first run the program, like so:</p>
+                <div class="images"><img class="images" src="image/image1.PNG" alt="CORS Anywhere Start"/></div>
+                <p>127.0.0.1 is my localhost, so I just prefixed my actual request with <span class="codeStyle">http://localhost:8080/</span>. This means that my request will hit the CORS Anywhere server so that the correct headers will be added and my requested data can be delivered correctly.
                 
+                <h2>Wait, XML?</h2>
+                <p>Yes, you read correctly. BGG will only return XML data. (This is why we aren't using the <span class="codeStyle">JSON.parse()</span> function.) XML is a little bit harder to read and work with, but it is not unmanageable. I would suggest getting <a href="https://notepad-plus-plus.org/">Notepad++</a> and installing the <a href="http://stackoverflow.com/a/8786249/4298546">XML Tools plugin</a> which allows you to auto-format messy XML to make it easier to read.</p>
                 
+                <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='./understandingXML.html';"><span>Next </span></button>
                 <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./introduction.html';"><span>Previous </span></button>
                 <button onclick="location.href='./testingDoc.html';">TEST</button>
                 
