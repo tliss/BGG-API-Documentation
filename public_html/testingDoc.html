@@ -11,6 +11,7 @@
     </head>
     <body>
         <p id="results"></p>
+        <img id="catanImg" src="" alt="Catan" style="max-height:300px;"/>
         
         <script>
             var parser, xmlDoc;
@@ -21,6 +22,10 @@
             
             results = document.getElementById("results");
             results.innerHTML = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            
+            var catanImg = document.getElementById("catanImg");
+            catanImg.src = xmlDoc.getElementsByTagName("image")[0].childNodes[0].nodeValue;
+
         </script>
     </body>
 </html>
