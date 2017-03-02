@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Understanding XML</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Welcome</a>
+            <a href="./introduction.html">Introduction</a>
+            <a href="./getRequests.html">GET Requests</a>
+            <a href="./understandingXML.html">Understanding XML</a>
+            <a href="./moreRequests.html">More Requests</a>
+        </div>
+
+        <div id="main">
+            
+            <span id="openBar" onclick="openNav()">&#9776;</span>
+            
+            <div id="frontPageHead">
+                <h1>More Requests</h1>
+            </div>
+            
+            <h2>Requesting multiple things</h2>
+            <p>To request multiple things, separate the ID numbers with commas:</p>
+            <div class="request">https://www.boardgamegeek.com/xmlapi2/thing?id=35424,2860</div>
+            
+            <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='';"><span>Next </span></button>
+            <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./understandingXML.html';"><span>Previous </span></button>
+            
+            <button onclick="location.href='./testingDoc.html';">TEST</button>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
+</html>
