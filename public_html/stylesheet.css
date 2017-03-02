@@ -37,6 +37,17 @@ table#t01 th {
     color: white;
 }
 
+.codeStyle {
+    font-family: monospace;
+    background:#a4a4a5;
+}
+
+.fiddleDiv {
+    width: auto;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
 #logo {
     text-align: center;
     width: 100%;
@@ -55,8 +66,8 @@ table#t01 th {
     padding-bottom: 3px;
     transition: 0.3s;
     position: fixed;
-    margin-left: -4em;
-    margin-top: 1em;
+    margin-left: -9em;
+    margin-top: .5em;
     font-weight: bold;
 }
 
@@ -81,6 +92,10 @@ h3 + p{
 }
 
 h3 + p + ul {
+    padding-left: 6em;
+}
+
+ol {
     padding-left: 6em;
 }
 
@@ -168,8 +183,8 @@ content: "\2014 \2009";
 #main {
     transition: margin-left .5s;
     padding: 20px;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 20em;
+    padding-right: 20em;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
