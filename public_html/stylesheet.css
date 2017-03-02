@@ -201,6 +201,25 @@ content: "\2014 \2009";
     h2{font-size: 20px;}
 }
 
+.divLinkContainer {
+    border-radius: 4px;
+    background-color: #ffba63;
+    border: 2px solid #071e57;
+    color: #071e57;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.divLink{
+    text-decoration: none;
+}
+
 /**********************
 *Button code taken and modified from:https://www.w3schools.com/css/css3_buttons.asp
 **********************/
@@ -225,8 +244,11 @@ content: "\2014 \2009";
   margin-bottom: 20px;
 }
 
-.buttonPrevious{
-    
+.request{
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+
 }
 
 .button span {

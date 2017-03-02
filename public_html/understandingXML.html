@@ -12,7 +12,7 @@
             <a href="./index.html">Welcome</a>
             <a href="./introduction.html">Introduction</a>
             <a href="./getRequests.html">GET Requests</a>
-            <a href="./understandingXML">Understanding XML</a>
+            <a href="./understandingXML.html">Understanding XML</a>
         </div>
 
         <div id="main">
@@ -24,9 +24,10 @@
             </div>
             
             <h2>Looking at the XML</h2>
-            <p>This will be pretty long, but lets take a look at the XML from that last request:</p>
-            <div style="text-align: center"><button class="button" style="vertical-align:middle; float:none; width:150px; margin-left:auto; margin-right:auto;" onclick="location.href='catan.xml';"><span>Open XML </span></button></div>
-            <p>test</p>
+            <p>This will be pretty long, but lets take a look at the XML from our previous request:</p>
+            <div class="request">http://www.boardgamegeek.com/xmlapi/boardgame/13</div>
+            <a class="divLink" href='catan.xml'><div class="divLinkContainer" style="margin-left:auto; margin-right:auto;">Open XML</div></a>
+            <p>This XML contains all BGG's database information for the <strong>boardgame</strong> with the ID number <strong>13</strong>. Just taking a quick glance through it, you can probably identify some common tags. The <strong>name</strong> tags all identify alternative names for the game, while the name tag with the <strong>primary="true"</strong> attribute is the game's primary name. </p>
             
             <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='';"><span>Next </span></button>
             <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./getRequests.html';"><span> Previous</span></button>
