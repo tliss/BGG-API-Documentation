@@ -61,6 +61,22 @@
                 <h2>Wait, XML?</h2>
                 <p>Yes, you read correctly. There's no JSON here. BGG will only return XML data. XML is a little bit harder to read and work with than JSON, but it is not unmanageable. I would suggest getting <a href="https://notepad-plus-plus.org/">Notepad++</a> and installing the <a href="http://stackoverflow.com/a/8786249/4298546">XML Tools plugin</a> which allows you to auto-format messy XML to make it easier to read.</p>
                 
+                <h2>Two API Versions</h2>
+                <p>It is worth mentioning now that there are two different APIs in use by BGG: <a href="https://boardgamegeek.com/wiki/page/BGG_XML_API#">BGG XML API</a> and <a href="https://boardgamegeek.com/wiki/page/BGG_XML_API2">BGG XML API2</a>. They make calls in two different ways, but both are still usable. Here's a quick comparison of what a request for the XML data of the boardgame <a href="https://boardgamegeek.com/boardgame/13/catan">Catan</a> would look like in each version:</p>              
+                <div class="request">
+                    <p>
+                        BGG XML API
+                        <br>
+                        http://www.boardgamegeek.com/xmlapi/boardgame/13
+                    </p>
+                    <p>
+                        BGG XML API2
+                        <br>
+                        https://www.boardgamegeek.com/xmlapi2/thing?id=013
+                    </p>
+                </div>
+                <p>As mentioned in the introduction, BGG divides physical objects into "things". With API1, you need to say specifically what <em>type</em> of thing you are trying to access and provide the ID#, but with API2 you don't need the type - you only need the ID#, so it is a little easier to use.</p>
+                    
                 <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='./understandingXML.html';"><span>Next </span></button>
                 <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./introduction.html';"><span>Previous </span></button>
                 

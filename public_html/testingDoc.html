@@ -4,13 +4,13 @@
         <title>Tester</title>
         <script>
             var req = new XMLHttpRequest();
-            req.open("GET", "http://localhost:2020/http://www.boardgamegeek.com/xmlapi/boardgame/13", false);
+            req.open("GET", "http://localhost:2020/https://www.boardgamegeek.com/xmlapi2/thing?id=013", false);
             req.send(null);
             console.log(req.responseText);
         </script>
     </head>
     <body>
-        <p id="results"></p>
+<!--        <p id="results"></p>
         <img id="catanImg" src="" alt="Catan" style="max-height:300px;"/>
         
         <script>
@@ -26,6 +26,6 @@
             var catanImg = document.getElementById("catanImg");
             catanImg.src = xmlDoc.getElementsByTagName("image")[0].childNodes[0].nodeValue;
 
-        </script>
+        </script>-->
     </body>
 </html>
