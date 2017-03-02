@@ -27,10 +27,19 @@
             <p>This will be pretty long, but lets take a look at the XML from our previous request:</p>
             <div class="request">http://www.boardgamegeek.com/xmlapi/boardgame/13</div>
             <a class="divLink" href='catan.xml'><div class="divLinkContainer" style="margin-left:auto; margin-right:auto;">Open XML</div></a>
-            <p>This XML contains all BGG's database information for the <strong>boardgame</strong> with the ID number <strong>13</strong>. Just taking a quick glance through it, you can probably identify some common tags. The <strong>name</strong> tags all identify alternative names for the game, while the name tag with the <strong>primary="true"</strong> attribute is the game's primary name. </p>
+            <p>This XML contains all BGG's database information for the <strong>boardgame</strong> with the ID number <strong>13</strong>. Just taking a quick glance through it, you can probably identify most of the tags. Tags like &lt;yearpublished&gt;, &lt;minplayers&gt;, &lt;maxplayers&gt;, &lt;playingtime&gt;, &lt;minplaytime&gt;, &lt;maxplaytime&gt;, and &lt;age&gt; are all pretty self-explanitory. The &lt;name&gt; tags all identify alternative names for the game, while the &lt;name&gt; tag with the <strong>primary="true"</strong> attribute is the game's primary name.</p>            
+            <p>You should also see a &lt;description&gt;, an &lt;image&gt; which is the games featured image, &lt;boardgamepublisher&gt;, &lt;boardgameartist&gt;, and many more. The key thing to remember is that all of this information coincides with the information displayed on the game's entry page. If you take a look at <a href="https://boardgamegeek.com/boardgame/13/catan">Catan's entry page</a>, the XML should make a lot more sense:
+            <div class="images"><a href="image/catan.PNG" target="_blank"><img class="images" src="image/catan.PNG" alt="Catan Entry Page"/></a></div>
+            <h2>Doing more with XML</h2>
+            <p>Ok, so now that we can understand the XML, how do we go about making use of it? For this, we're going to use a basic XML parser in our HTML page. If we put the following code into our original script, we should be able to get an HTML page that outputs the name of the game, taken from the XML:</p>
+            <div class="fiddleDiv" style='margin-left: 5em'><script async src="//jsfiddle.net/samort7/8xq8y5fs/2/embed/html/"></script></div>
+            <p>When we render this page, you should see the following:</p>
+            <div class="images"><a href="image/catanName.PNG" target="_blank"><img class="images" src="image/catanName.PNG" alt="Catan Displayed"/></a></div>
+            <p>So what's going on here? Lets look at this code a little more closely.</p>
             
             <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='';"><span>Next </span></button>
             <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./getRequests.html';"><span> Previous</span></button>
+            <button onclick="location.href='./testingDoc.html';">TEST</button>
         </div>
         <script src="javascript.js"></script>
     </body>

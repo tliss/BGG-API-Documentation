@@ -20,7 +20,7 @@
             xmlDoc = parser.parseFromString(text, "text/xml");
             
             results = document.getElementById("results");
-            results.innerHTML = xmlDoc.getElementsByTagName("yearpublished")[0].childNodes[0].nodeValue;
+            results.innerHTML = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
         </script>
     </body>
 </html>
