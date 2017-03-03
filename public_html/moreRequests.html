@@ -31,7 +31,24 @@
             <p>You should see that in this XML document, there are two of the main &lt;item&gt; tags - one for each board game. We can write some quick code to print out the name of both of those games:</p>
             <div class="fiddleDiv" style='margin-left: 5em'><script async src="https://jsfiddle.net/samort7/c8sb85xc/1/embed/html/"></script></div>
             <p>The results will look like this:</p>
-            <div class="images"><a href="image/twoGames.PNG" target=""><img class="images" src="image/twoGames.PNG" alt="Two Games Displayed"/></a></div>
+            <div class="images"><a href="image/twoGames.PNG" target=" "><img class="images" src="image/twoGames.PNG" alt="Two Games Displayed"/></a></div>
+            
+            <h2>Requesting a users game collection</h2>
+            There are a lot of parameters that you can add when requesting a user's collection. In this example, I've use some of the more common ones. The format for longer requests like this is as follows: the first parameter you list follows a ? (question mark), and each subsequent parameter follows an & (ampersand).</p>
+            <div class="request">https://www.boardgamegeek.com/xmlapi2/collection?username=samort7&subtype=boardgame&own=1</div>
+            <a class="divLink" href='https://www.boardgamegeek.com/xmlapi2/collection?username=samort7&subtype=boardgame&own=1'><div class="divLinkContainer" style="margin-left:auto; margin-right:auto;">Open XML</div></a>
+            <ul>
+                <li><strong>username=samort7</strong> - This is the user who's collection we are examining. In this case, we are looking at <a href="https://www.boardgamegeek.com/collection/user/Samort7">my collection</a>.</li>
+                <li><strong>subtype=boardgame</strong> - This means that we are only interested in boardgames. We don't want to see boardgame expansions, accessories, videogames, etc.</li>
+                <li><strong>own=1</strong> - This indicates that we only want to see games that I own. If the value was set to 0, that would mean 'false' and it would return games in my collection that I don't have marked as owned.
+            </ul>
+            <p>An interesting thing to note, is what happens after you send a request for a collection. Once a request is sent, the servers must catalog the items in a users collection, meaning your request won't be sent back right away. Instead, you will see something like this:</p>
+            <div class="images"><a href="image/message.PNG" target=" "><img class="images" src="image/message.PNG" alt="Message Displayed"/></a></div>
+            <p>Once the log has been completed, you can run the query again and will receive the XML back. Unfortunately, there is no way to know how long it will take for that query to come back. If you get a 202 status code back, then it indicates BGG has queued your request and you need to keep retrying until you no longer get a 202 status code. If you want to parse the data to display the items in a users collection, you can do something like this:</p>
+            <div class="fiddleDiv" style='margin-left: 5em'><script async src="https://jsfiddle.net/samort7/xuc3eorg/embed/html/"></script></div>
+            <p>The result will look like this:</p>
+            <div class="images"><a href="image/collection.PNG" target=" "><img class="images" src="image/collection.PNG" alt="Collection Displayed"/></a></div>
+            
             
             <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='';"><span>Next </span></button>
             <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./understandingXML.html';"><span>Previous </span></button>
