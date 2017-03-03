@@ -184,7 +184,24 @@ content: "\2014 \2009";
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 400px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    #main {padding-left: 0em;
+           padding-right: 0em;
+           padding: 0px;
+    }
+    blockquote {font-size: 14px;
+                padding-left: 0em;
+    }
+    img{width:70%;
+            height: auto;
+    }
+    h1{font-size: 40px;}
+    h2{font-size: 20px;}
+}
+
+@media screen and (max-width: 1137px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     #main {padding-left: 0em;
