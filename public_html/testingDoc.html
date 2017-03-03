@@ -4,41 +4,11 @@
         <title>Tester</title>
         <script>
             var req = new XMLHttpRequest();
-            req.open("GET", "http://localhost:8080/https://www.boardgamegeek.com/xmlapi2/thing?id=1406,320", false);
+            req.open("GET", "http://localhost:8080/https://www.boardgamegeek.com/xmlapi2/thing?id=013", false);
             req.send(null);
-//            console.log(req.responseText);
+            console.log(req.responseText);
         </script>
     </head>
     <body>
-        <div id="gameNames"></div>
-        
-        <script>
-            var parser, xmlDoc;
-            var text = req.responseText;
-            
-            parser = new DOMParser();
-            xmlDoc = parser.parseFromString(text, "text/xml");
-            
-            //Get the number of items (we know this will be two because we only
-            //passed in two IDs
-            var numberOfNames = xmlDoc.getElementsByTagName("item").length;
-            
-            //Create an array of the two items
-            var items = xmlDoc.getElementsByTagName("item");        
-            
-            for (i=0; i<numberOfNames; i++) {
-                //Create a new paragraph tag
-                var tempName = document.createElement("p");
-                
-                //Get the primary (first) name of the game
-                var gameName = items[i].getElementsByTagName('name')[0].getAttribute('value');
-                
-                //Set the contents of the paragraph tag to the game name
-                tempName.innerHTML = gameName;
-                
-                //Add the paragraph tag to the div in the body
-                document.getElementById("gameNames").appendChild(tempName);
-            }
-        </script>
     </body>
 </html>
