@@ -26,7 +26,12 @@
             
             <h2>Requesting multiple things</h2>
             <p>To request multiple things, separate the ID numbers with commas:</p>
-            <div class="request">https://www.boardgamegeek.com/xmlapi2/thing?id=35424,2860</div>
+            <div class="request">https://www.boardgamegeek.com/xmlapi2/thing?id=1406,320</div>
+            <a class="divLink" href='https://www.boardgamegeek.com/xmlapi2/thing?id=1406,320'><div class="divLinkContainer" style="margin-left:auto; margin-right:auto;">Open XML</div></a>
+            <p>You should see that in this XML document, there are two of the main &lt;item&gt; tags - one for each board game. We can write some quick code to print out the name of both of those games:</p>
+            <div class="fiddleDiv" style='margin-left: 5em'><script async src="https://jsfiddle.net/samort7/c8sb85xc/1/embed/html/"></script></div>
+            <p>The results will look like this:</p>
+            <div class="images"><a href="image/twoGames.PNG" target=""><img class="images" src="image/twoGames.PNG" alt="Two Games Displayed"/></a></div>
             
             <button class="button buttonNext" style="vertical-align:middle" onclick="location.href='';"><span>Next </span></button>
             <button class="button buttonPrevious" style="vertical-align:middle" onclick="location.href='./understandingXML.html';"><span>Previous </span></button>
